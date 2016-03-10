@@ -1,21 +1,23 @@
-<html ng-app="twitter"><!-- quin es el nom del app  -->
+<html ng-app="twitter" class="fondo"><!-- quin es el nom del app  -->
 
-<head>
-  <link rel="stylesheet" src="/app.css">
+<head class="fondo">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-
+  <link rel="stylesheet" href="app.css">
 </head>
-  <body ng-controller="controller"><!-- quin es el controller -->
-    <div >
+  <body ng-controller="controller" class="fondo"><!-- quin es el controller -->
+  <input class="dadesUsuari" ng-model="nick" type="text" readonly />
+  <input class="dadesUsuari" ng-model="descripcio" type="text" readonly />
+
+    <div class="log">
       <h1>Login </h1>
       <form  ng-submit="usuariCanvi(username)"><!-- ng-submit serveix per quan l'hi apretem al boto faci la funció que l'hi escribim.-->
         <label>Usuario : </label><input ng-model="username"  type="text" name="nick" value="" /><!-- ng-model serveix per per dirli quin es el seu valor dintre la funció..-->
-        <br/>
-        <input type="submit" value="Log" />
+        <input class="button" type="submit" value="Log" />
       </form>
 
       </div>
@@ -26,39 +28,36 @@
               <li ng-repeat="messages in messagesFuncio"><b>{{messages.user}}</b> {{messages.text}}</li><!-- ng-repeat quina es la variable que volem treure i quina es la funció
           </ul>
       </div> -->
-  <div >
+  <div class="divTweetFollow" >
     <ul >
       <h1>Tweets Usuari </h1>
-      <li ng-repeat="user in messageUsuari"> {{user.text}}</li><!-- ng-repeat quina es la variable que volem treure i quina es la funció -->
+      <li ng-repeat="user in messageUsuari" class="tweet"> {{user.text}}</li><!-- ng-repeat quina es la variable que volem treure i quina es la funció -->
     </ul>
+
   </div>
-  <div >
+  <br>
+  <div class="divTweetFollow" >
     <ul >
       <h1>Follow Usuari </h1>
-      <li ng-repeat="follow in following"> {{follow.idUser}}</li><!-- ng-repeat quina es la variable que volem treure i quina es la funció -->
+      <li ng-repeat="follow in following" class="follow"> {{follow.idUser}}</li><!-- ng-repeat quina es la variable que volem treure i quina es la funció -->
     </ul>
+    <br>
   </div>
-    <div >
-        <form ng-submit="addTweet()"><!-- ng-submit serveix per quan l'hi apretem al boto faci la funció que l'hi escribim.-->
+    <div class="divDreta">
+        <form class="formulariPeu" ng-submit="addTweet()"><!-- ng-submit serveix per quan l'hi apretem al boto faci la funció que l'hi escribim.-->
           <!--<label>Usuario : </label><input ng-model="user" type="text" name="user" value="" /><!-- ng-model serveix per per dirli quin es el seu valor dintre la funció..-->
-          <label>Tweet : </label><input ng-model="text" type="text" name="Tweet" value="" />
-          <br/>
-          <input type="submit" value="Enviar"/>
+          <label>Tweet : </label><input ng-model="text" type="text" name="Tweet" value="" /><input class="button" type="submit" value="Enviar"/>
         </form>
-    </div>
-  <div >
-    <form ng-submit="addFollow()"><!-- ng-submit serveix per quan l'hi apretem al boto faci la funció que l'hi escribim.-->
+      <br>
+      <form class="formulariPeu" ng-submit="addFollow()"><!-- ng-submit serveix per quan l'hi apretem al boto faci la funció que l'hi escribim.-->
       <!--<label>Usuario : </label><input ng-model="user" type="text" name="user" value="" /><!-- ng-model serveix per per dirli quin es el seu valor dintre la funció..-->
-      <label>Follow : </label><input ng-model="idUser" type="text" name="Tweet" value="" />
-      <br/>
-      <input type="submit" value="Follow"/>
+      <label>Follow : </label><input ng-model="idUser" type="text" name="Tweet" value="" /><input class="button" type="submit" value="Follow"/>
     </form>
   </div>
 
 
   <!-- ruta de app.js i controller.js-->
   <script src="app.js"></script>
-  <script src="app.css"></script>
   <script src="controller.js"></script>
   </body>
 </html>

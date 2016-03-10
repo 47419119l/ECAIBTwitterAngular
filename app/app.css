@@ -1,6 +1,88 @@
 /* app css stylesheet */
-div{
-  margin-left: 20px;
+.fondo{
+  background-color: #F6F7EB;
+}
+.button {
+  color: #FFF;
+display: inline-block;
+margin: 10px;
+padding: 5px;
+text-align: center;
+width: 90px;
+border: none;
+cursor: pointer;
+display: inline-block;
+
+text-align: center;
+background-attachment: scroll;
+  background-color:#3F88C5;
+
+background-repeat: no-repeat;
+background-position: 0 0;
+border-radius: 5px;
+font-family: Verdana, Geneva, sans-serif;
+font-size: 12px;
+font-weight: bold;
+}
+label{
+  margin-right: 5px;
+}
+.formulariPeu{
+  float: left;
+}
+.tweet{
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  float: left;
+  height: 100px;
+  list-style:none;
+  border:none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+.follow{
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  float: left;
+  height:50px;
+  list-style:none;
+  border:none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+.divTweetFollow{
+  float: left;
+}
+.dadesUsuari{
+ border: none;
+  font-size: 11px;
+  color:#55575b;
+  background-color: #F6F7EB;
+  border-width:0;
+}
+.divDreta{
+  float: right;
+}
+.follow{
+  float: inherit;
+}
+.button:hover {
+  background-color: #55575b;
+
+
+}
+.log{
+  border:none;
+  border-radius: 5px;
+  background-color: #cccccc;
+}
+.options{
+  margin: 20px;
+  padding: 20px;
   border:none;
   border-radius: 5px;
   background-color: #cccccc;
