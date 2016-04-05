@@ -33,14 +33,10 @@ label{
 .tweet{
   padding: 10px;
   margin: 10px;
-  width: 250px;
-  float: left;
   height: 100px;
-  list-style:none;
   border:none;
   border-radius: 5px;
   text-align: center;
-  background-color: #FFFFFF;
 }
 .follow{
   padding: 10px;
@@ -65,7 +61,7 @@ label{
   border-width:0;
 }
 .divDreta{
-  float: right;
+  float: left;
 }
 .follow{
   float: inherit;

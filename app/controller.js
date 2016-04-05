@@ -11,6 +11,7 @@ app.controller("controller", ["$scope", "messagesFun","getUsuari","getTweets","g
         $scope.usuariCanvi = function(usuario){
             $scope.usuari = getUsuari(usuario);
             $scope.messageUsuari = getTweets(usuario);
+            $scope.following=getFollow(usuario);
             $scope.nick =usuario;
         };
         $scope.addTweet = function(){
